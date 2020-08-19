@@ -55,7 +55,6 @@ The analysis is Done. You can find the priortize list in the output file: exampl
 ```
 ### Output:
 The script will output a ranking a score for the candidate caustive CNV. 
-
 ``head example_output.txt``
 ```
 +---------------------------------+-----------------+--------+------------+------------+-----------+-----------+
