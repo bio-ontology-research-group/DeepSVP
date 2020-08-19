@@ -5,7 +5,8 @@ PredCNV is a method that prioritizing Copy Number Variants (CNV) using Phenotype
 We train and evaluate our method using human genomic Structural Variation collected from [dbvar](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/) dataset.
 
 ## Dependencies
-The code was developed and tested using python 3.7. To install python dependencies run: `pip install -r requirements.txt`
+The code was developed and tested using python 3.7. To install python dependencies run:  
+ `pip install -r requirements.txt`
 
 ## Prediction of candicate CNV workflow
 We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/download-go-annotations/), Uber-anatomy ontology
