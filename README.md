@@ -20,7 +20,7 @@ In addation we collected genomics features using public tools, [GADO](https://ww
 - ``dl2vec_score.py``: script to get the DL2vec score using the trained model.
 - ``training.py``: script to train and testing the model, with Hyperparameter optimization
 
-## Running PredCNV
+## Running PredCNV using pretrained models
 1. Download the distribution file in [PredCNV.gz]()
 2. Extract the distribution files PredCNV
 3. Download the required database by: `cd PredCNV` then run:  `bash annotation/download.sh`
