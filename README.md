@@ -74,4 +74,4 @@ The script will output a ranking a score for the candidate caustive CNV.
 ```
 
 ## Note
-For any questions or comments please contact azza.althagafi@kaust.edu.sa
+For any questions or comments please contact: azza.althagafi@kaust.edu.sa
