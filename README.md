@@ -25,7 +25,7 @@ In addation we collected genomics features using public tools, [GADO](https://ww
 pip install phenocnv
 ```
 
-## Running PredCNV using pretrained models
+## Running PhenoCNV using pretrained models
 1. Download the required database `bash annotation/download.sh` and place them into data folder. 
 2. Run the command `phenocnv -h` to display help and parameters:
 ```
