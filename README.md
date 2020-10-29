@@ -11,6 +11,7 @@ The code was developed and tested using python 3.7. To install python dependenci
 We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/download-go-annotations/), Uber-anatomy ontology
  [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon), Mammalian Phenotype ontology [MP](http://www.informatics.jax.org/vocab/mp_ontology), and Human Phenotype Ontology [HPO](https://hpo.jax.org/app/download/annotation) using [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
 In addation we collected genomics features using public tools, [GADO](https://www.nature.com/articles/s41467-019-10649-4/), [StrVCTVRE](https://github.com/andrewSharo/StrVCTVRE), and databases [Annovar](https://annovar.openbioinformatics.org/), [AnnotSV](https://lbgi.fr/AnnotSV/annotations). 
+![workflow](workflow/workflow.png)
 
 ## Scripts
 - Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
@@ -23,9 +24,6 @@ In addation we collected genomics features using public tools, [GADO](https://ww
 ```
 pip install predcnv
 ```
-
-## Workflow 
-![workflow](workflow/workflow.png)
 
 ## Running PredCNV using pretrained models
 1. Download the required database `bash annotation/download.sh` and place them into data folder. 
