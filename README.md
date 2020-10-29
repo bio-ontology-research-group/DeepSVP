@@ -62,7 +62,7 @@ The script will output a ranking a score for the candidate caustive CNV.
 ``head example_output.txt``
 ```
 +---------------------------------+-----------------+--------+------------+------------+-----------+-----------+
-| ID                              |   PredCNV_Score |   rank | SV chrom   |   SV start |    SV end | SV type   |
+| ID                              |     PhenoCNV    |   rank | SV chrom   |   SV start |    SV end | SV type   |
 |---------------------------------+-----------------+--------+------------+------------+-----------+-----------|
 | nssv16214430                    |     1.00000e+00 |      1 | 1          |    1020163 |   2306775 | DEL       |
 | DEL_pindel_34282                |     1.59618e-08 |      2 | 11         |   92050773 |  92050934 | DEL       |
