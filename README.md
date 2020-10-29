@@ -43,10 +43,11 @@ optional arguments:
   -operation [OPERATION]
                         Preferred operation for the gene annotation in big CNV
                         regions (max, mean) , default='max'
+  --data                path to data folder
 ```
 
 ### Example:
-    predcnv -inputfile example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model "hp" -operation mean
+    predcnv -inputfile example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model "hp" -operation mean --data ./data/
 
  ```   
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
