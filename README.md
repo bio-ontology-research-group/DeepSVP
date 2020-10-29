@@ -13,13 +13,6 @@ We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/
 In addation we collected genomics features using public tools, [GADO](https://www.nature.com/articles/s41467-019-10649-4/), [StrVCTVRE](https://github.com/andrewSharo/StrVCTVRE), and databases [Annovar](https://annovar.openbioinformatics.org/), [AnnotSV](https://lbgi.fr/AnnotSV/annotations). 
 ![workflow](workflow/workflow.png)
 
-## Scripts
-- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
-- ``annotations.sh``: This script is used to annotate the varaints.
-- ``data_preprocessing.py``: preprocessing the annotations and features selection. 
-- ``dl2vec_score.py``: script to get the DL2vec score using the trained model.
-- ``training.py``: script to train and testing the model, with Hyperparameter optimization
-
 ## Installation 
 ```
 pip install predcnv
@@ -77,5 +70,12 @@ The script will output a ranking a score for the candidate caustive CNV.
 
 ```
 
-## Note
+## Scripts
+- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
+- ``annotations.sh``: This script is used to annotate the varaints.
+- ``data_preprocessing.py``: preprocessing the annotations and features selection. 
+- ``dl2vec_score.py``: script to get the DL2vec score using the trained model.
+- ``training.py``: script to train and testing the model, with Hyperparameter optimization
+
+## Final notes
 For any questions or comments please contact: azza.althagafi@kaust.edu.sa
