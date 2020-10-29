@@ -1,5 +1,4 @@
-# PredCNV
-PredCNV is a method that prioritizing Copy Number Variants (CNV) using Phenotype and Gene Functional Similarity. 
+# PredCNV - Prioritizing Copy Number Variants (CNV) using Phenotype and Gene Functional Similarity. 
 
 ## Dataset
 We train and evaluate our method using human genomic Structural Variation collected from [dbvar](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/) dataset.
@@ -20,11 +19,17 @@ In addation we collected genomics features using public tools, [GADO](https://ww
 - ``dl2vec_score.py``: script to get the DL2vec score using the trained model.
 - ``training.py``: script to train and testing the model, with Hyperparameter optimization
 
+## Installation 
+```
+pip install predcnv
+```
+
+## Workflow 
+![workflow](workflow/workflow.png)
+
 ## Running PredCNV using pretrained models
-1. Download the distribution file in [PredCNV.gz]()
-2. Extract the distribution files PredCNV
-3. Download the required database by: `cd PredCNV` then run:  `bash annotation/download.sh`
-4. Run the command `python runPredCNV.py -h` to display help and parameters:
+1. Download the required database `bash annotation/download.sh` and place them into data folder. 
+2. Run the command `predcnv -h` to display help and parameters:
 ```
 PredCNV: A phenotype-based tool to prioritize caustive CNV using WGS data and
 Phenotype/Gene Functional Similarity
@@ -43,7 +48,7 @@ optional arguments:
 ```
 
 ### Example:
-    python runPredCNV.py -inputfile example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model "hp" -operation mean
+    predcnv -inputfile example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model "hp" -operation mean
 
  ```   
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
