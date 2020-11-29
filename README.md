@@ -1,12 +1,5 @@
 # PhenoCNV - Prioritizing Copy Number Variants (CNV) using Phenotype and Gene Functional Similarity
-
-
-<div align="center">
- <img class="product-image"
-         src="images/cnv.png" /> 
-</div>
-                                                                       
-
+                                                                  
 ## Dataset
 We train and evaluate our method using human genomic Structural Variation collected from [dbvar](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/) dataset.
 
