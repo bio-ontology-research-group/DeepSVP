@@ -57,7 +57,6 @@ Options:
  |================                | 50% Phenotype prediction... 
  |========================        | 75% CNV Prediction... 
  |================================| 100% DONE! You can find the prediction results in the output file: example_output.txt
- 
 ```
 #### Output:
 The script will output a ranking a score for the candidate caustive CNV. 
