@@ -19,21 +19,25 @@ pip install phenocnv
 1. Download the required database AnnoSV, then run `bash annotation/download.sh` and place the annotated file into data folder. 
 2. Run the command `phenocnv --help` to display help and parameters:
 ```
-PhenoCNV: A phenotype-based tool to prioritize caustive CNV using WGS data and
-Phenotype/Gene Functional Similarity
+Usage: phenocnv [OPTIONS]
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -inputfile [INPUTFILE]
-                        Path to VCF file
-  -hpo [HPO]            List of phenotype ids separated by commas
-  -outfile [OUTFILE]    Path to results file
-  -model [MODEL]        Preferred model (go, mp, uberon, hp,
-                        go_ppi,mp_ppi,uberon_ppi,hp_ppi) , default='hp'
-  -operation [OPERATION]
-                        Preferred operation for the gene annotation in big CNV
-                        regions (max, mean) , default='max'
-  --data                path to data folder
+  PredCNV: A phenotype-based tool to prioritize caustive  CNV using WGS data
+  and Phenotype/Gene Functional Similarity
+
+Options:
+  -d, --data-root TEXT     Data root folder  [required]
+  -i, --in-file TEXT       Annotated Input file  [required]
+  -p, --hpo TEXT           List of phenotype ids separated by commas
+                           [required]
+
+  -m, --model TEXT         Ontology model, one of the following (go , mp , hp,
+                           cl, uberon, combined), default=mp
+
+  -ag, --aggregation TEXT  Aggregation method for the genes within CNV (max or
+                           mean) default=max
+
+  -o, --outfile TEXT       Output result file
+  --help                   Show this message and exit.
 ```
 
 ### Example:
