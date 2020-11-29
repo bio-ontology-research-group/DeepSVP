@@ -2,7 +2,7 @@
 #######################################################################################################################################################
 # Trimmomatic + GATK 4  + bgzip ( the *.g.VCF files) & tabix-index based workflow 
 #    Azza Althagafi, CBRC
-#    Nagarajan Kathiresan, KSL 
+#    Nagarajan Kathiresan, KSL (https://github.com/IBEXCluster)
 #       Modification required for any users:
 #        1. INPUT (directory location)
 #        2. PROJECT (directory location)
