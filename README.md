@@ -26,30 +26,33 @@ Usage: phenocnv [OPTIONS]
   and Phenotype/Gene Functional Similarity
 
 Options:
-  -d, --data-root TEXT     Data root folder  [required]
-  -i, --in-file TEXT       Annotated Input file  [required]
-  -p, --hpo TEXT           List of phenotype ids separated by commas
-                           [required]
+  -d, --data-root TEXT      Data root folder  [required]
+  -i, --in-file TEXT        Annotated Input file  [required]
+  -p, --hpo TEXT            List of phenotype ids separated by commas
+                            [required]
 
-  -m, --model_type TEXT         Ontology model, one of the following (go , mp , hp,
-                           cl, uberon, combined), default=mp
+  -maf, --maf_filter FLOAT  Allele frequency filter using gnomAD and 1000G
+                            default<=0.01
 
-  -ag, --aggregation TEXT  Aggregation method for the genes within CNV (max or
-                           mean) default=max
+  -m, --model_type TEXT     Ontology model, one of the following (go , mp ,
+                            hp, cl, uberon, combined), default=mp
 
-  -o, --outfile TEXT       Output result file
-  --help                   Show this message and exit.
+  -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max
+                            or mean) default=max
+
+  -o, --outfile TEXT        Output result file
+  --help                    Show this message and exit.
 ```
 
 ### Example:
-    phenocnv -d data/ -i annotated_file.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -m 'go' -ag 'max' -o example_output.txt
+    phenocnv -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m 'go' -maf 0.01 -ag $i -o example_output.txt
 
  ```   
  |========                        | 25% Reading the input phenotypes...
- |================                | 50% Phenotype prediction...
- |========================        | 75% CNV Prediction...
- |================================| 100%
-DONE! You can find the prediction results in the output file: example_output.txt 
+ |================                | 50% Phenotype prediction... 
+ |========================        | 75% CNV Prediction... 
+ |================================| 100% DONE! You can find the prediction results in the output file: example_output.txt
+ 
 ```
 #### Output:
 The script will output a ranking a score for the candidate caustive CNV. 
