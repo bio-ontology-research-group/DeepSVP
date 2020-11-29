@@ -31,7 +31,7 @@ Options:
   -p, --hpo TEXT           List of phenotype ids separated by commas
                            [required]
 
-  -m, --model TEXT         Ontology model, one of the following (go , mp , hp,
+  -m, --model_type TEXT         Ontology model, one of the following (go , mp , hp,
                            cl, uberon, combined), default=mp
 
   -ag, --aggregation TEXT  Aggregation method for the genes within CNV (max or
