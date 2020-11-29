@@ -1,8 +1,8 @@
 #!/bin/bash
 #######################################################################################################################################################
-#  Trimmomatic + GATK 4  + bgzip ( the *.g.VCF files) & tabix-index based workflow 
+# Trimmomatic + GATK 4  + bgzip ( the *.g.VCF files) & tabix-index based workflow 
 #    Azza Althagafi, CBRC
-#	   Nagarajan Kathiresan, KSL 
+#    Nagarajan Kathiresan, KSL 
 #       Modification required for any users:
 #        1. INPUT (directory location)
 #        2. PROJECT (directory location)
