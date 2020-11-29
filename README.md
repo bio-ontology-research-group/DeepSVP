@@ -6,7 +6,8 @@ We train and evaluate our method using human genomic Structural Variation collec
 ## Prediction the candidate CNVs workflow
 We integrate the annotates from Gene ontology [GO](http://geneontology.org/docs/download-go-annotations/), Uber-anatomy ontology
  [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon), Mammalian Phenotype ontology [MP](http://www.informatics.jax.org/vocab/mp_ontology), and Human Phenotype Ontology [HPO](https://hpo.jax.org/app/download/annotation) using [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
-In addation we collected genomics features using public tools, [GADO](https://www.nature.com/articles/s41467-019-10649-4/), [StrVCTVRE](https://github.com/andrewSharo/StrVCTVRE), and databases [Annovar](https://annovar.openbioinformatics.org/), [AnnotSV](https://lbgi.fr/AnnotSV/annotations). 
+We collected genomics features using public tool [AnnotSV](https://lbgi.fr/AnnotSV/annotations). 
+
 ![workflow](images/workflow.png)
 
 ## Installation 
@@ -15,7 +16,7 @@ pip install phenocnv
 ```
 
 ## Running the prediction model
-1. Download the required database `bash annotation/download.sh` and place them into data folder. 
+1. Download the required database AnnoSV, then run `bash annotation/download.sh` and place the annotated file into data folder. 
 2. Run the command `phenocnv --help` to display help and parameters:
 ```
 PhenoCNV: A phenotype-based tool to prioritize caustive CNV using WGS data and
