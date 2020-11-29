@@ -16,7 +16,8 @@ pip install phenocnv
 ```
 
 ## Running the prediction model
-1. Download the required database AnnoSV, then run `bash annotation/download.sh` and place the annotated file into data folder. 
+1. Download all the files in [data]() and place them into data folder.
+2. Download the required database AnnoSV, then run `bash annotation.sh -i input.vcf -o annotated_file.tsv` and place the annotated VCF file into data folder. 
 2. Run the command `phenocnv --help` to display help and parameters:
 ```
 Usage: phenocnv [OPTIONS]
@@ -41,11 +42,10 @@ Options:
 ```
 
 ### Example:
-    phenocnv -d data/ -i example.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -m 'go' -ag 'max' -o example_output.txt
+    phenocnv -d data/ -i annotated_file.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -m 'go' -ag 'max' -o example_output.txt
 
  ```   
- Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
- |========                        | 25% Annotated files generated successfully.
+ |========                        | 25% Reading the input phenotypes...
  |================                | 50% Phenotype prediction...
  |========================        | 75% CNV Prediction...
  |================================| 100%
