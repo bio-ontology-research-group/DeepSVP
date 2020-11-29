@@ -64,8 +64,8 @@ The script will output a ranking a score for the candidate caustive CNV.
 - ``data_preprocessing.py``: preprocessing the annotations and features.
 - ``dl2vec_prediction.py``: script to get the DL2vec score using the trained model.
 - ``model_training.py``: script to train and testing the model, with Hyperparameter optimization
-- ``BWA_GATK.sh`` : script to run GATK workflow for the input fastq files for the real samples.
-- ``run_Manta.sh`` : script to generate VCF with the structural variants (SVs), we used [Manta](https://github.com/Illumina/manta) to identify the candidate SVs.
+- ``BWA_GATK.sh`` : script to run GATK workflow for the input fastq files for the real samples. Run in KAUST Supercomputing [IBEX].(https://www.hpc.kaust.edu.sa/ibex).
+- ``run_Manta.sh`` : script to generate VCF with the structural variants (SVs), we used [Manta](https://github.com/Illumina/manta) to identify the candidate SVs.  Run in KAUST Supercomputing [IBEX].
 
 ## Final notes
 For any questions or comments please contact: azza.althagafi@kaust.edu.sa
