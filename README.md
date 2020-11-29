@@ -61,9 +61,9 @@ The script will output a ranking a score for the candidate caustive CNV.
 ## Scripts
 - Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
 - ``annotations.sh``: This script is used to annotate the varaints.
-- ``data_preprocessing.py``: preprocessing the annotations and features selection. 
-- ``dl2vec_score.py``: script to get the DL2vec score using the trained model.
-- ``training.py``: script to train and testing the model, with Hyperparameter optimization
+- ``data_preprocessing.py``: preprocessing the annotations and features.
+- ``dl2vec_prediction.py``: script to get the DL2vec score using the trained model.
+- ``model_training.py``: script to train and testing the model, with Hyperparameter optimization
 
 ## Final notes
 For any questions or comments please contact: azza.althagafi@kaust.edu.sa
