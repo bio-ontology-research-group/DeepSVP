@@ -41,7 +41,7 @@ Options:
 ```
 
 ### Example:
-    phenocnv -inputfile example.vcf -hpo HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -outfile example_output.txt -model "hp" -operation mean --data ./data/
+    phenocnv -d data/ -i example.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007  -m 'go' -ag 'max' -oo example_output.txt
 
  ```   
  Annotate VCF file (example.vcf) with the phenotypes (HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218,HP:0000007)...
