@@ -48,23 +48,7 @@ The analysis is Done. You can find the priortize list in the output file: exampl
 ```
 #### Output:
 The script will output a ranking a score for the candidate caustive CNV. 
-``head example_output.txt``
-```
-+---------------------------------+-----------------+--------+------------+------------+-----------+-----------+
-| ID                              |     PhenoCNV    |   rank | SV chrom   |   SV start |    SV end | SV type   |
-|---------------------------------+-----------------+--------+------------+------------+-----------+-----------|
-| nssv16214430                    |     1.00000e+00 |      1 | 1          |    1020163 |   2306775 | DEL       |
-| DEL_pindel_34282                |     1.59618e-08 |      2 | 11         |   92050773 |  92050934 | DEL       |
-| BI_GS_CNV_2_179516678_179528763 |     2.62666e-15 |      3 | 2          |  178651951 | 178664036 | DEL       |
-| ALU_umary_ALU_666               |     6.02897e-25 |      4 | 1          |  188579454 | 188579455 | ALU       |
-| ALU_umary_ALU_6671              |     4.44479e-25 |      5 | 8          |   34341082 |  34341083 | ALU       |
-| ALU_umary_ALU_9350              |     9.27781e-26 |      6 | 12         |   76881950 |  76881951 | ALU       |
-| ALU_umary_ALU_948               |     2.35165e-26 |      7 | 1          |  247589325 | 247589326 | ALU       |
-| ALU_umary_ALU_12787             |     8.06472e-27 |      8 | X          |  127645122 | 127645123 | ALU       |
-| ALU_umary_ALU_778               |     8.06472e-27 |      9 | 1          |  214046225 | 214046226 | ALU       |
-+---------------------------------+-----------------+--------+------------+------------+-----------+-----------+
 
-```
 
 ## Scripts
 - Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
