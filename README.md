@@ -16,7 +16,7 @@ pip install phenocnv
 ```
 
 ## Running the prediction model
-1. Download all the files in [data]() and place them into data folder.
+1. Download all the files in [data](https://bio2vec.cbrc.kaust.edu.sa/data/azza/data/) and place them into data folder.
 2. Download and install the required database [AnnoSV](https://lbgi.fr/AnnotSV/downloads), then run:
 ```
 bash annotation.sh -i input.vcf -o annotated_file
