@@ -24,30 +24,30 @@ pip install phenocnv
     and place the annotated VCF file into data folder. 
 
 3. Run the command `phenocnv --help` to display help and parameters:
-```
-Usage: phenocnv [OPTIONS]
+    ```
+    Usage: phenocnv [OPTIONS]
 
-  PredCNV: A phenotype-based tool to prioritize caustive  CNV using WGS data
-  and Phenotype/Gene Functional Similarity
+      PredCNV: A phenotype-based tool to prioritize caustive  CNV using WGS data
+      and Phenotype/Gene Functional Similarity
 
-Options:
-  -d, --data-root TEXT      Data root folder  [required]
-  -i, --in-file TEXT        Annotated Input file  [required]
-  -p, --hpo TEXT            List of phenotype ids separated by commas
+    Options:
+      -d, --data-root TEXT      Data root folder  [required]
+      -i, --in-file TEXT        Annotated Input file  [required]
+      -p, --hpo TEXT            List of phenotype ids separated by commas
                             [required]
 
-  -maf, --maf_filter FLOAT  Allele frequency filter using gnomAD and 1000G
+      -maf, --maf_filter FLOAT  Allele frequency filter using gnomAD and 1000G
                             default<=0.01
 
-  -m, --model_type TEXT     Ontology model, one of the following (go , mp ,
+      -m, --model_type TEXT     Ontology model, one of the following (go , mp ,
                             hp, cl, uberon, combined), default=mp
 
-  -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max
+      -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max
                             or mean) default=max
 
-  -o, --outfile TEXT        Output result file
-  --help                    Show this message and exit.
-```
+      -o, --outfile TEXT        Output result file
+      --help                    Show this message and exit.
+    ```
 
 ### Example:
     phenocnv -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m 'go' -maf 0.01 -ag max -o example_output.txt
