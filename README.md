@@ -50,8 +50,9 @@ pip install phenocnv
     ```
 
 ### Example:
-    phenocnv -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m 'go' -maf 0.01 -ag max -o example_output.txt
 
+    phenocnv -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m 'go' -maf 0.01 -ag max -o example_output.txt
+    
  ```   
  |========                        | 25% Reading the input phenotypes...
  |================                | 50% Phenotype prediction... 
