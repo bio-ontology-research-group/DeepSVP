@@ -26,7 +26,7 @@ pip install deepsvp
     ```
     Usage: deepsvp [OPTIONS]
 
-      PredCNV: A phenotype-based tool to prioritize caustive  CNV using WGS data
+      DeepSVP: A phenotype-based tool to prioritize caustive  CNV using WGS data
       and Phenotype/Gene Functional Similarity
 
     Options:
