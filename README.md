@@ -22,7 +22,7 @@ pip install deepsvp
     ```
     and place the annotated VCF file into data folder. 
 
-3. Run the command `phenocnv --help` to display help and parameters:
+3. Run the command `deepsvp --help` to display help and parameters:
     ```
     Usage: deepsvp [OPTIONS]
 
