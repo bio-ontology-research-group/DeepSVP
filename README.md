@@ -1,4 +1,4 @@
-# PhenoCNV - Prioritizing Copy Number Variants (CNV) using Phenotype and Gene Functional Similarity
+# DeepSVP - Integration of Genomics and Phenotypes for Structural Variant Prioritization using Deep Learning
                                                                   
 ## Dataset
 We train and evaluate our method using human genomic Structural Variation collected from [dbvar](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/) dataset.
@@ -11,7 +11,7 @@ We collected genomics features using public tool [AnnotSV](https://lbgi.fr/Annot
 
 ## Installation 
 ```
-pip install phenocnv
+pip install deepsvp
 ```
 
 ## Running the prediction model
@@ -24,7 +24,7 @@ pip install phenocnv
 
 3. Run the command `phenocnv --help` to display help and parameters:
     ```
-    Usage: phenocnv [OPTIONS]
+    Usage: deepsvp [OPTIONS]
 
       PredCNV: A phenotype-based tool to prioritize caustive  CNV using WGS data
       and Phenotype/Gene Functional Similarity
@@ -50,7 +50,7 @@ pip install phenocnv
 
 ### Example:
 
-    phenocnv -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m 'go' -maf 0.01 -ag max -o example_output.txt
+    deepsvp -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m 'go' -maf 0.01 -ag max -o example_output.txt
     
  ```   
  |========                        | 25% Reading the input phenotypes...
