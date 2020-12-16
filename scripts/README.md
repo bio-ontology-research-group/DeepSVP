@@ -1,5 +1,4 @@
-## Scripts
-- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
+Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
 - ``annotations.sh``: This script is used to annotate the varaints.
 - ``data_preprocessing.py``: preprocessing the annotations and features.
 - ``dl2vec_prediction.py``: script to get the DL2vec score using the trained model.
