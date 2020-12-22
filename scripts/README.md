@@ -1,6 +1,9 @@
 # DeepSVP - Data preprocessing and training
 
-Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
+- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research--group/DL2Vec/tree/master/Experiment).
+- Dataset for training: [benign](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/GRCh38.variant_call.clinical.benign_or_likely_benign.vcf.gz), and 
+    [pathogenic](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/GRCh38.variant_call.clinical.pathogenic_or_likely_pathogenic.vcf.gz)
+    
 - ``annotations.sh``: This script is used to annotate the varaints.
 - ``data_preprocessing.py``: preprocessing the annotations and features.
 - ``dl2vec_prediction.py``: script to get the DL2vec score using the trained model.
