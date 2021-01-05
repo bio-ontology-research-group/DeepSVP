@@ -1,4 +1,5 @@
-# DeepSVP - Integration of Genomics and Phenotypes for Structural Variant Prioritization using Deep Learning
+# DeepSVP
+#### Integration of Genomics and Phenotypes for Structural Variant Prioritization using Deep Learning
                                                                   
 ## Dataset
 We train and evaluate our method using human genomic Structural Variation collected from [dbvar](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/) dataset.
