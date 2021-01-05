@@ -1,5 +1,9 @@
 # DeepSVP
-#### Integration of Genomics and Phenotypes for Structural Variant Prioritization using Deep Learning
+DeepSVP is a computational method to prioritize structural variants involved in genetic diseases by combining genomic information with information about gene functions. We incorporate phenotypes linked to genes, functions
+  of gene products, gene expression in individual celltypes, and
+  anatomical sites of expression, and systematically relate them to
+  their phenotypic consequences through ontologies and machine
+  learning
                                                                   
 ## Dataset
 We train and evaluate our method using human genomic Structural Variation collected from [dbvar](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/) dataset.
@@ -16,14 +20,14 @@ pip install deepsvp
 ```
 
 ## Running the prediction model
-1. Download all the files in [data](https://bio2vec.cbrc.kaust.edu.sa/data/azza/data/) and place them into data folder.
-2. Download and install the required database [AnnoSV](https://lbgi.fr/AnnotSV/downloads), and then run:
+- Download all the files in [data](https://bio2vec.cbrc.kaust.edu.sa/data/azza/data/) and place them into data folder.
+- Download and install the required database [AnnoSV](https://lbgi.fr/AnnotSV/downloads), and then run:
     ```
     bash scripts/annotation.sh -i input.vcf -o annotated_file
     ```
     and place the annotated VCF file into data folder. 
 
-3. Run the command `deepsvp --help` to display help and parameters:
+- Run the command `deepsvp --help` to display help and parameters:
     ```
     Usage: deepsvp [OPTIONS]
 
