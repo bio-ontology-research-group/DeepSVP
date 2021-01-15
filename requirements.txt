@@ -15,3 +15,4 @@ h5py
 scipy
 progress
 skopt
+click
