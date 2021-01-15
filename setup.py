@@ -9,7 +9,6 @@ README = os.path.join(SETUP_DIR, "README.md")
 
 try:
     import gittaggers
-
     tagger = gittaggers.EggInfoFromGit
 except ImportError:
     tagger = egg_info_cmd.egg_info

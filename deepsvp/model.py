@@ -4,7 +4,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
 
-
 class Rank_model(nn.Module):
     def __init__(self, num_feature):
         super(Rank_model, self).__init__()
