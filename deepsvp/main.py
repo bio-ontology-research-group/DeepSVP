@@ -43,7 +43,6 @@ from torch.utils.data import TensorDataset
 from torch.autograd import Variable
 from networkx.readwrite import json_graph
 from gensim.models import Word2Vec, Phrases, phrases, KeyedVectors
-import phenocnv.utils as utils
 from random import seed
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 np.random.seed(42)
@@ -54,7 +53,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 pd.options.mode.chained_assignment = None  # default='warn'
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
-tmp = tempfile.mkdtemp(prefix='PredCNV', suffix='/')
+tmp = tempfile.mkdtemp(prefix='DeepSVP', suffix='/')
 bar = Bar(max=4, fill='=', suffix='%(percent)d%%')
 lock = Lock()
 WALK_LEN = 25
