@@ -14,3 +14,4 @@ tensorflow==2.3.0
 h5py
 scipy
 progress
+skopt
