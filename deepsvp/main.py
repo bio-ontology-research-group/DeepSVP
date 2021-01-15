@@ -31,8 +31,8 @@ import networkx as nx
 import json
 import multiprocessing as mp
 from threading import Lock
-import phenocnv.model
-from phenocnv.model import Rank_model
+import deepsvp.model
+from deepsvp.model import Rank_model
 import torch
 from torch._C import *
 import torch.optim as optim
@@ -185,7 +185,6 @@ def run_walk(nodes, G, data_type):
     """
     This function to run the walks in parallel
     """
-    #print("Start random walk")
     number = 30
     length = len(nodes) // number
     processes = [
@@ -397,7 +396,7 @@ def collect_features(data, onto, operation, data_root):
     # Gene Features
     #---------------------
     Gene_features = data[data['AnnotSV type'] == 'split']
-    if (onto == 'all'):
+    if (onto == 'combined'):
         onto_types = ["go", "mp", "uberon", "hp", "cl"]
         for i in onto_types:
             with open(tmp + i +"_dl2vec.pkl","rb") as f: 
@@ -479,4 +478,3 @@ def load_cnv_model(in_file, model_type, aggregation, data_root, maf):
 
 if __name__ == '__main__':
     main() 
-
