@@ -37,7 +37,7 @@ onto_type=sys.argv[1]
 tmp='/tmp/'
 
 path='./data/'
-WALK_LEN=10 
+WALK_LEN=25 #10 
 N_WALKS=100 
 global data_pairs
 data_pairs = []
