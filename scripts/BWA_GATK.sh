@@ -18,9 +18,12 @@ module load trimmomatic/0.38 bwa/0.7.17/gnu-6.4.0 samtools/1.8 gatk/4.0.1.1 tabi
 
 ## 2. Reference list 
 
-export REF=/ibex/reference/KSL/human_g1k_v37_decoy/human_g1k_v37_decoy.fasta
-export MILLS=/ibex/reference/KSL/human_ref/Mills_and_1000G_gold_standard.indels.b37.vcf
-export DB_SNP=/ibex/reference/KSL/human_ref/dbsnp_138.b37.vcf
+#export REF=/ibex/reference/KSL/human_g1k_v37_decoy/human_g1k_v37_decoy.fasta
+export REF=/ibex/reference/KSL/hg38/Homo_sapiens_assembly38.fasta
+#export MILLS=/ibex/reference/KSL/human_ref/Mills_and_1000G_gold_standard.indels.b37.vcf
+export MILLS=/ibex/reference/KSL/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
+#export DB_SNP=/ibex/reference/KSL/human_ref/dbsnp_138.b37.vcf
+export DB_SNP=ibex/reference/KSL/hg38/Homo_sapiens_assembly38.dbsnp138.vcf
 export GATK=/sw/csi/gatk/3.8/el7.6_binary/GATK-3.8/GenomeAnalysisTK.jar
 
 
