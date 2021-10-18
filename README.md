@@ -44,7 +44,7 @@ pip install deepsvp
                             default<=0.01
 
       -m, --model_type TEXT     Ontology model, one of the following (go , mp ,
-                            hp, cl, uberon, combined), default=mp
+                            hp, cl, uberon, union), default=mp
 
       -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max
                             or mean) default=max
