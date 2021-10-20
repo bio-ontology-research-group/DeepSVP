@@ -41,11 +41,7 @@ setup(
     extras_require={},
     setup_requires=[] + pytest_runner,
     tests_require=["pytest<5"],
-    entry_points={
-        "console_scripts": [
-            "deepsvp=deepsvp.main:main",
-        ]
-    },
+    entry_points={ "console_scripts": ["deepsvp=deepsvp.main:main",]},
     zip_safe=True,
     cmdclass={"egg_info": tagger},
     python_requires=">3",
