@@ -8,7 +8,10 @@
 - ``data_preprocessing.py``: preprocessing the annotations and features.
 - ``pheno_model.py``: script to get the DL2vec score using the trained model.
 - ``deepsvp_training.py``: script to train and testing the model, with Hyperparameter optimization\
-	In order to run use the comand: ```python deepsvp_training.py ONTOLOGY TYPE_OF_OPERATION```
+	In order to run use the comand:
+	```
+	python deepsvp_training.py ONTOLOGY TYPE_OF_OPERATION
+	``` 
 	where ONTOLOGY is any of: ```(mp, go, cl, hp, uberon, union)``` and TYPE_OF_OPERATION: ```(max, mean)```
 	
 - ``BWA_GATK.sh`` : script to run GATK workflow for the input fastq files for the real samples, run using KAUST Supercomputing [IBEX](https://www.hpc.kaust.edu.sa/ibex).
