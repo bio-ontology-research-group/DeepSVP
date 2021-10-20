@@ -50,14 +50,14 @@ from statistics import mean
 from operator import itemgetter
 import scipy.stats as ss
 import warnings
+
 warnings.simplefilter(action='ignore', category=FutureWarning)
 pd.options.mode.chained_assignment = None  # default='warn'
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 tmp = tempfile.mkdtemp(prefix='DeepSVP', suffix='/')
 bar = Bar(max=4, fill='=', suffix='%(percent)d%%')
 lock = Lock()
-WALK_LEN = 25
-N_WALKS = 100
+
 
 logger = logging.getLogger('my-logger')
 logger.propagate = False
@@ -77,15 +77,24 @@ logger.disabled = True
            default=0.01)
 @ck.option('--model_type','-m',
             default='mp',
-            help='Ontology model, one of the following (go , mp , hp, cl, uberon, combined), default=mp')
+            help='Ontology model, one of the following (go , mp , hp, cl, uberon, union), default=mp')
 @ck.option('--aggregation','-ag',
             help='Aggregation method for the genes within CNV (max or mean) default=max',
             default='max')
+@ck.option('--aggregation','-ag',
+            help='Aggregation method for the genes within CNV (max or mean) default=max',
+            default='max')
+@ck.option('--WALK-LEN','-wl',
+            help='Length of the random walk, default=25',
+            default=25)
+@ck.option('--N-WALKS','-nw',
+            help='Number of walks, default=100',
+            default=100)
 @ck.option('--outfile','-o',
             default='cnv_results.tsv',
             help='Output result file')
 
-def main(data_root, in_file, hpo, maf_filter, model_type, aggregation, outfile):
+def main(data_root, in_file, hpo, maf_filter, model_type, aggregation, WALK_LEN, N_WALKS, outfile):
     # Check data folder and required files
     """DeepSVP: A phenotype-based tool to prioritize caustive CNV using WGS data and Phenotype/Gene Functional Similarity"""
     try:
@@ -140,7 +149,7 @@ def load_pheno_model(in_file, hpo, model_type, data_root):
     print(" Reading the input phenotypes...")
     pheno = tmp + "pheno.txt"
     #load_pheno_model
-    if (model_type == 'combined'):
+    if (model_type == 'union'):
         for i in ['go', 'mp', 'hp', 'cl', 'uberon']:
             pheno_model(in_file, i, pheno, tmp, data_root)
     else:
@@ -206,7 +215,7 @@ def write_file(pair, data_type):
     This function to write the walk to new file
     """
     with lock:
-        with open(tmp + data_type + "_walks.txt", "w") as fp:
+        with open(tmp + data_type + "_walks.txt", "a") as fp:
             for p in pair:
                 for sub_p in p:
                     fp.write(str(sub_p) + " ")
@@ -395,7 +404,7 @@ def collect_features(data, onto, operation, data_root):
     # Gene Features
     #---------------------
     Gene_features = data[data['AnnotSV type'] == 'split']
-    if (onto == 'combined'):
+    if (onto == 'union'):
         onto_types = ["go", "mp", "uberon", "hp", "cl"]
         for i in onto_types:
             with open(tmp + i +"_dl2vec.pkl","rb") as f: 

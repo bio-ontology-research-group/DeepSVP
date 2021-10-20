@@ -44,6 +44,7 @@ class Rank_model(nn.Module):
         disease_embed = disease_embed.view(-1, 50, 1)
 
         similarity = torch.bmm(gene_embed, disease_embed).view(-1)
-        s = self.output_sig(similarity)
+        score = self.output_sig(similarity)
 
-        return s
+        return score
+        
