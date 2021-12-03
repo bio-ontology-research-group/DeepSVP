@@ -18,13 +18,16 @@ The created synthetic genome for eveluating each method can be downloaded from [
   Usage: evaluation.py [OPTIONS]
 
   Options:
-  -m, --method TEXT      Method to run
+  -m, --method TEXT      Method to evaluate
   -dir, --data-dir TEXT  Predictions directories
   -n, --num-p INTEGER    Number of patients
   --help                 Show this message and exit.
   
   example:
-  python evaluation.py -m CADD-SV -n 1503  -dir user/data/ 
+  python evaluation.py -m CADD-SV -n 1503 -dir '/root/data/CADDSV/*.tsv'
+  python evaluation.py -m AnnotSV -n 1503 -dir '/root/data/AnnotSV/*.tsv'
+  python evaluation.py -m StrVCTVRE -n 1503 -dir '/root/data/StrVCTVRE/*.tsv'
+  python evaluation.py -m DeepSVP_hp_max -n 1503 -dir '/root/data/DeepSVP_hp_max/*full.tsv'
   ```
   
 - **deepsvp_prediction.py**:  This script is used to run different DeepSVP models, and generate the input files to run using `evaluation.py`. 
@@ -43,4 +46,5 @@ The created synthetic genome for eveluating each method can be downloaded from [
 
 ## Final notes
 For any questions or comments please contact: azza.althagafi@kaust.edu.sa
+
 
