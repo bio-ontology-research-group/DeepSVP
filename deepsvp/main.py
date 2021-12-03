@@ -57,7 +57,8 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 tmp = tempfile.mkdtemp(prefix='DeepSVP', suffix='/')
 bar = Bar(max=4, fill='=', suffix='%(percent)d%%')
 lock = Lock()
-
+WALK_LEN = 25
+N_WALKS = 100
 
 logger = logging.getLogger('my-logger')
 logger.propagate = False
@@ -81,20 +82,11 @@ logger.disabled = True
 @ck.option('--aggregation','-ag',
             help='Aggregation method for the genes within CNV (max or mean) default=max',
             default='max')
-@ck.option('--aggregation','-ag',
-            help='Aggregation method for the genes within CNV (max or mean) default=max',
-            default='max')
-@ck.option('--WALK-LEN','-wl',
-            help='Length of the random walk, default=25',
-            default=25)
-@ck.option('--N-WALKS','-nw',
-            help='Number of walks, default=100',
-            default=100)
 @ck.option('--outfile','-o',
             default='cnv_results.tsv',
             help='Output result file')
 
-def main(data_root, in_file, hpo, maf_filter, model_type, aggregation, WALK_LEN, N_WALKS, outfile):
+def main(data_root, in_file, hpo, maf_filter, model_type, aggregation, outfile):
     # Check data folder and required files
     """DeepSVP: A phenotype-based tool to prioritize caustive CNV using WGS data and Phenotype/Gene Functional Similarity"""
     try:
@@ -124,8 +116,7 @@ def main(data_root, in_file, hpo, maf_filter, model_type, aggregation, WALK_LEN,
 
         # Load and Run cnv model
         bar.next()
-        output = load_cnv_model(in_file, model_type, aggregation, data_root,
-                                maf_filter)
+        output = load_cnv_model(in_file, model_type, aggregation, data_root, maf_filter)
         print(" CNV Prediction... ")
 
         # Write the results to a file

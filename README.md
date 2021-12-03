@@ -29,33 +29,30 @@ pip install deepsvp
 
 - Run the command `deepsvp --help` to display help and parameters:
     ```
-    Usage: deepsvp [OPTIONS]
-
-      DeepSVP: A phenotype-based tool to prioritize caustive  CNV using WGS data
-      and Phenotype/Gene Functional Similarity
-
-    Options:
-      -d, --data-root TEXT      Data root folder  [required]
-      -i, --in-file TEXT        Annotated Input file  [required]
-      -p, --hpo TEXT            List of phenotype ids separated by commas
-                            [required]
-
-      -maf, --maf_filter FLOAT  Allele frequency filter using gnomAD and 1000G
-                            default<=0.01
-
-      -m, --model_type TEXT     Ontology model, one of the following (go , mp ,
-                            hp, cl, uberon, union), default=mp
-
-      -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max
-                            or mean) default=max
-
-      -o, --outfile TEXT        Output result file
-      --help                    Show this message and exit.
+    Usage: main.py [OPTIONS]
+      
+    DeepSVP: A phenotype-based tool to prioritize caustive CNV using WGS data
+    and Phenotype/Gene Functional Similarity
+  
+  	Options:
+    -d, --data-root TEXT      Data root folder  [required]
+    -i, --in-file TEXT        Annotated Input file  [required]
+    -p, --hpo TEXT            List of phenotype ids separated by commas
+                              [required]
+    -maf, --maf_filter FLOAT  Allele frequency filter using gnomAD and 1000G
+                              default<=0.01
+    -m, --model_type TEXT     Ontology model, one of the following (go , mp ,
+                              hp, cl, uberon, union), default=mp
+    -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max
+                              or mean) default=max
+    -o, --outfile TEXT        Output result file
+    --help                    Show this message and exit.
+        
     ```
 
 ### Example:
 
-    deepsvp -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -wl 25 -nw 100 -ag max -o example_output.txt
+    deepsvp -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
     
  ```   
  |========                        | 25% Reading the input phenotypes...
