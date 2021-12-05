@@ -1,7 +1,7 @@
 # DeepSVP: Evaluation
                                                    
 ## Dataset
-The created synthetic genome for eveluating each method can be downloaded from [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/).
+The created synthetic genome for eveluating each method can be downloaded from [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/experiments.zip).
 
 ## Install and run different methods:
 
