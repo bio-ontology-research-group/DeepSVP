@@ -1,5 +1,4 @@
 import os
-import utils
 import mygene
 import numpy
 import pandas as pd
