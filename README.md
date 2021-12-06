@@ -65,7 +65,7 @@ pip install deepsvp
 The script will output a ranking a score for the candidate caustive CNV. 
 
 ## Scripts 
-- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment).
+- Details for predicting pathogenic variants and comparison with other methods can be found in the [experiment](https://github.com/bio-ontology-research-group/DL2Vec/tree/master/Experiment) folder.
 - ``annotations.sh``: This script is used to annotate the varaints.
 - ``data_preprocessing.py``: preprocessing the annotations and features.
 - ``pheno_model.py``: script to get the DL2vec score using the trained model.
