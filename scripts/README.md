@@ -1,6 +1,6 @@
 # DeepSVP - Data preprocessing and training
 
-- Details for predicting gene-disease associations with DL2Vec can be found in the [experiment](https://github.com/bio-ontology-research--group/DL2Vec/tree/master/Experiment).
+- Our experiments for predicting gene-disease associations with DL2Vec and pathogenic structural variants with DeepSVP can be found [here](https://github.com/bio-ontology-research--group/DL2Vec/tree/master/Experiment).
 - Dataset for training: [dbVar:benign](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/GRCh38.variant_call.clinical.benign_or_likely_benign.vcf.gz), and 
     [dbVar:pathogenic](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_assembly/GRCh38/vcf/GRCh38.variant_call.clinical.pathogenic_or_likely_pathogenic.vcf.gz)
 
