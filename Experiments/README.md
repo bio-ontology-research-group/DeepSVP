@@ -1,11 +1,11 @@
 # DeepSVP: Evaluation
                                                    
 ## Dataset
-The created synthetic genome for eveluating each method can be downloaded from [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/experiments.zip).
+The created synthetic genomes for eveluating each method can be downloaded from [here](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/experiments.zip).
 
 ## Install and run different methods:
 
-- Install the following methods by follow the insterction they provided and run all using the default setting:
+- Install the following methods using the instructions they provided and run all using the default setting:
   - [StrVCTVRE](https://github.com/andrewSharo/StrVCTVRE)
   - [CADD-SV](https://cadd-sv.bihealth.org/score)
   - [AnnotSV](https://github.com/lgmgeo/AnnotSV)
