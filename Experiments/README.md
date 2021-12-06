@@ -12,7 +12,7 @@ The created synthetic genomes for eveluating each method can be downloaded from 
   
   
 ## Scripts 
-- **evaluation.py**: This script is used to break the ties randommly and report different perfoermance measure.
+- **evaluation.py**: This script is used to compute metrics (recall@rank, AUC, AUPR); ties are broken randomly.
 
   ``` 
   Usage: evaluation.py [OPTIONS]
