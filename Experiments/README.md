@@ -24,10 +24,10 @@ The created synthetic genomes for eveluating each method can be downloaded from 
   --help                 Show this message and exit.
   
   example:
-  python evaluation.py -m CADD-SV -n 1503 -dir '/root/data/CADDSV/*.tsv'
-  python evaluation.py -m AnnotSV -n 1503 -dir '/root/data/AnnotSV/*.tsv'
-  python evaluation.py -m StrVCTVRE -n 1503 -dir '/root/data/StrVCTVRE/*.tsv'
-  python evaluation.py -m DeepSVP_hp_max -n 1503 -dir '/root/data/DeepSVP_hp_max/*full.tsv'
+  python evaluation.py -m CADD-SV -n 1503 -dir './data/CADDSV/*.tsv'
+  python evaluation.py -m AnnotSV -n 1503 -dir './data/AnnotSV/*.tsv'
+  python evaluation.py -m StrVCTVRE -n 1503 -dir './data/StrVCTVRE/*.tsv'
+  python evaluation.py -m DeepSVP_hp_max -n 1503 -dir './data/DeepSVP_hp_max/*full.tsv'
   ```
   
 - **deepsvp_prediction.py**:  This script is used to run different DeepSVP models, and generate the input files to run using `evaluation.py`. 
