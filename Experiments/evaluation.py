@@ -44,7 +44,7 @@ def main (method, data_dir , num_p):
             pr_auc = sklearn.metrics.average_precision_score(df['label'], df['score'], average='micro')
         a.append(pr_auc)
         index = df[df['label']==1]        
-        index['ID'] = pred.split('/')[11].split('.')[0].split('_')[0]
+        index['ID'] = pred.split('/')[-1].split('.')[0].split('_')[0]
         index['ID'] = index['ID'].astype(int)
         allscores = allscores.append(index)             
         rank = index['rank'].values[0]
