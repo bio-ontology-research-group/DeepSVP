@@ -36,8 +36,8 @@ The created synthetic genomes for eveluating each method can be downloaded from 
    Usage: deepsvp_prediction.py [OPTIONS]
 
    Options:
-   -m, --model_type TEXT     Ontology model, one of the following (go , mp , hp, cl, uberon, union)
-   -ag, --aggregation TEXT   Aggregation method for the genes within CNV (max , mean)
+   -m, --onto TEXT     Ontology model, one of the following (go , mp , hp, cl, uberon, union)
+   -ag, --ope TEXT   Aggregation operation for the genes within CNV (max , mean)
    -sub, --subsets TEXT   Phenotypes subsets (full)
 
    example:

@@ -18,10 +18,10 @@ pd.options.mode.chained_assignment = None
 
 @ck.command()
 @ck.option(
-    '--model_type', '-m', default=f'mp',
+    '--onto', '-m', default=f'mp',
     help='Ontology model, one of the following (go , mp , hp, cl, uberon, union')
 @ck.option(
-    '--aggregation', '-ag', default=f'max',
+    '--ope', '-ag', default=f'max',
     help='Aggregation method for the genes within CNV (max , mean)')
 @ck.option(
     '--subsets', '-sub', default='full',
@@ -182,7 +182,7 @@ def collect_features(data, onto, operation, ids, dl2vec, res_go,res_mp,res_hp,re
     #---------------------
     # get DL2vec scores
     Gene_features = data[data['AnnotSV type']=='split']
-    if (onto == 'all'):
+    if (onto == 'union'):
         Gene_features['go_score'] = Gene_features.apply(lambda x: get_scores(res_go,x['ID'], x['entrezgene']), axis=1)
         Gene_features['mp_score'] = Gene_features.apply(lambda x: get_scores(res_mp,x['ID'], x['entrezgene']), axis=1)
         Gene_features['cl_score'] = Gene_features.apply(lambda x: get_scores(res_cl,x['ID'], x['entrezgene']), axis=1)
