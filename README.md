@@ -19,8 +19,8 @@ We collected genomics features using public tool [AnnotSV (v2.3 or 2.2)](https:/
 pip install deepsvp
 ```
 
-## Running the prediction model
-- Download all the files in [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSvp/) and place them into data folder.
+## Running the prediction model 
+- Download all the files in [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/) and place them into data folder.
 - Download and install the required database [AnnoSV (v2.3 or 2.2)](https://lbgi.fr/AnnotSV/downloads), and then run:
     ```
     bash scripts/annotation.sh -i input.vcf -o annotated_file
