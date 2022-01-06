@@ -6,7 +6,6 @@ import gzip
 import os
 import sys
 import logging
-import mygene
 import numpy
 import tensorflow as tf
 import gensim
