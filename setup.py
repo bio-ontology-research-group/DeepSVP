@@ -27,7 +27,7 @@ pytest_runner = ["pytest < 6", "pytest-runner < 5"] if needs_pytest else []
 
 setup(
     name="deepsvp",
-    version="1.0.0",
+    version="1.0.2",
     description="DeepSVP: Integration of Genomics and Phenotypes forStructural Variant Prioritization using Deep Learning",
     long_description=open(README).read(),
     long_description_content_type="text/markdown",
