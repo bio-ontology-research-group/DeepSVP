@@ -1,0 +1,11 @@
+README.md
+setup.py
+deepsvp/main.py
+deepsvp/model.py
+deepsvp.egg-info/PKG-INFO
+deepsvp.egg-info/SOURCES.txt
+deepsvp.egg-info/dependency_links.txt
+deepsvp.egg-info/entry_points.txt
+deepsvp.egg-info/requires.txt
+deepsvp.egg-info/top_level.txt
+deepsvp.egg-info/zip-safe
