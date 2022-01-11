@@ -53,6 +53,10 @@ pip install deepsvp
 ### Example:
 
     deepsvp -d data/ -i example_annotsv.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
+
+	or by using [cwl-runner](https://github.com/common-workflow-language/cwltool), modify the input file in the input example yaml [deepsvp.yaml]() file and run the command 
+
+	cwl-runner deepsvp.cwl deepsvp.yaml 
     
  ```   
  |========                        | 25% Reading the input phenotypes...
@@ -60,6 +64,8 @@ pip install deepsvp
  |========================        | 75% CNV Prediction... 
  |================================| 100% DONE! You can find the prediction results in the output file: example_output.txt
 ```
+
+
 
 #### Output:
 The script will output a ranking a score for the candidate caustive CNV. 

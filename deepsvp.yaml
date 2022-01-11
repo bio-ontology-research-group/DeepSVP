@@ -1,0 +1,11 @@
+path_data: 
+  class: Directory
+  location: '/Users/althagat/Desktop/CNV/data/'
+input_file: 
+  class: File
+  path: '/Users/althagat/Desktop/CNV/data/example_annotsv.tsv'
+agg_method: 'max'
+input_pheno: 'HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218'
+onto_type: 'cl'
+maf_value: 0.01
+output_file: 'example_output_cwl.tsv'
