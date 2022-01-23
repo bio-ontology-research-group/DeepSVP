@@ -20,7 +20,7 @@ using pip version 20.3.1:
 pip install deepsvp
 ```
 
-or based on a recommandition from other user, you can use conda to create the environment:
+or based on a recommandition from other user (Geoffroy Véronique @lgmgeo), you can use conda to create the environment:
 ```
 conda create -n deepsvp-py38-pip2031 python=3.8 pip=20.3.1
 conda activate deepsvp-py38-pip2031
