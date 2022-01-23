@@ -15,8 +15,16 @@ We collected genomics features using public tool [AnnotSV (v2.3 or 2.2)](https:/
 
 
 ## Installation 
+using pip version 20.3.1:
 ```
 pip install deepsvp
+```
+
+or based on a recommandition from other user, you can use conda to create the environment:
+```
+conda create -n deepsvp-py38-pip2031 python=3.8 pip=20.3.1
+conda activate deepsvp-py38-pip2031
+pip3 install deepsvp
 ```
 
 ## Running the prediction model 
