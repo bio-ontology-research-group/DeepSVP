@@ -2,8 +2,8 @@
 echo "AnnotSV Annotations:"
 
 # Inputs argumenets 
-input_vcf=$1
-output=$2
+input_vcf=$2
+output=$4
 
 # AnnotSV annotations
 export ANNOTSV=data/AnnotSV
