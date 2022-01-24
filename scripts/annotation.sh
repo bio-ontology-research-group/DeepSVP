@@ -7,4 +7,4 @@ output=$4
 
 # AnnotSV annotations
 export ANNOTSV=data/AnnotSV
-$ANNOTSV/bin/AnnotSV/AnnotSV.tcl -SVinputFile $input_vcf  -genomeBuild GRCh38 -outputFile $output 
+$ANNOTSV/bin/AnnotSV -SVinputFile $input_vcf  -genomeBuild GRCh38 -outputFile $output 
