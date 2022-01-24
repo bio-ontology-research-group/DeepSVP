@@ -13,7 +13,7 @@ We integrated the annotations from different sources:
 
 This work is done using [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
 
-We collected [genomics features](https://lbgi.fr/AnnotSV/annotations) using the [AnnotSV (v2.3 or 2.2)](https://lbgi.fr/AnnotSV/downloads) public tool. 
+We collected [genomics features](https://lbgi.fr/AnnotSV/annotations) using the [AnnotSV (v2.2)](https://lbgi.fr/AnnotSV/downloads) public tool. 
 
 
 ## Installation 
