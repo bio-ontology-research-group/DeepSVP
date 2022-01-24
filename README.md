@@ -34,7 +34,7 @@ conda deactivate
 ```
 
 ## Running the DeepSVP prediction model 
-- Download all the files from [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/) and place them in the folder named "data":
+- Download all the files from [data](https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/) and place the uncompressed files/repository in the folder named "data":
 ```
 mkdir DeepSVP/          ;# /path_of_your_DeepSVP_repository/
 cd DeepSVP
@@ -44,25 +44,28 @@ cd data                 ;# /path_of_your_DeepSVP_data_repository/
 wget "https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/experiments.zip"   # can be very long
 unzip experiments.zip
 ```
-- Download and install the required [AnnoSV (2.2)](https://lbgi.fr/AnnotSV/downloads) tool in the "data" folder:
+- Download and install the required [AnnoSV (2.3)](https://lbgi.fr/AnnotSV/downloads) tool in the "data" folder:
 ```
 cd /path_of_your_DeepSVP_data_repository/
-wget "https://lbgi.fr/AnnotSV/Sources/AnnotSV_2.2.tar.gz"
-gunzip -c AnnotSV_2.2.tar.gz | tar -xvf -
-cd AnnotSV_2.2
+git clone  git@github.com:lgmgeo/AnnotSV.git --branch v2.3
+cd AnnotSV/
 make PREFIX=. install
+make DESTDIR= PREFIX=. install-human-annotation
 cd ..
-mv AnnotSV_2.2/ AnnotSV/
 ```
 
-- Add AnnotSV (v2.2) annotation in your VCF input file ($your_input_vcf):
+- Add genomic features to your VCF input file (/path_and_name_of_your_vcf_input_file/) thanks to AnnotSV (v2.3):
+
+e.g. /path_and_name_of_your_vcf_input_file/ = ./input.vcf
+
+e.g. /path_and_name_of_your_annotsv_output_file/ = ./data/output.annotsv.annotated.tsv
+     
 ```
 bash 
 export ANNOTSV=/path_of_your_DeepSVP_data_repository/AnnotSV
-$ANNOTSV/bin/AnnotSV/AnnotSV.tcl -SVinputFile $your_input_vcf  -genomeBuild GRCh38 -outputFile $your_annotsv_output.annotated.tsv
-
+$ANNOTSV/bin/AnnotSV -SVinputFile ./input.vcf -genomeBuild GRCh38 -outputFile ./data/output.annotsv.annotated.tsv
 ```
-And place the annotated VCF file ($your_annotsv_output.annotated.tsv) in the data folder (/path_of_your_DeepSVP_data_repository/). 
+Your annotated VCF file (./data/output.annotsv.annotated.tsv) should be placed in the data folder (/path_of_your_DeepSVP_data_repository/). 
 
 - Run the command `deepsvp --help` to display help and parameters:
 ```
@@ -88,7 +91,7 @@ Options:
 
 - Run the example (with you own HPO terms):
 ```
-    deepsvp -d data/ -i $your_annotsv_output.annotated.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
+    deepsvp -d data/ -i output.annotsv.annotated.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
 ```    
 Or run the example with the deepsvp-py38-pip2031 Conda Environment:
 ```
