@@ -55,14 +55,14 @@ cd ..
 mv AnnotSV_2.2/ AnnotSV/
 ```
 
-- Run AnnotSV v2.2:
+- Add AnnotSV (v2.2) annotation in your VCF input file ($your_input_vcf):
 ```
 bash 
 export ANNOTSV=/path_of_your_DeepSVP_data_repository/AnnotSV
 $ANNOTSV/bin/AnnotSV/AnnotSV.tcl -SVinputFile $your_input_vcf  -genomeBuild GRCh38 -outputFile $your_annotsv_output.annotated.tsv
 
 ```
-And place the annotated VCF file ($your_annotsv_output.annotated.tsv) in the data folder. 
+And place the annotated VCF file ($your_annotsv_output.annotated.tsv) in the data folder (/path_of_your_DeepSVP_data_repository/). 
 
 - Run the command `deepsvp --help` to display help and parameters:
 ```
