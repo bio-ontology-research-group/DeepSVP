@@ -6,10 +6,10 @@ We train and evaluate our method using human SV collected from [dbvar](https://f
 
 ## Annotation data sources (integrated in the candidate SV prediction workflow)
 We integrated the annotations from different sources:
-- Gene ontology [GO](http://geneontology.org/docs/download-go-annotations/)
-- Uber-anatomy ontology [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon)
-- Mammalian Phenotype ontology [MP](http://www.informatics.jax.org/vocab/mp_ontology)
-- Human Phenotype Ontology [HPO](https://hpo.jax.org/app/download/annotation)
+- Gene ontology ([GO](http://geneontology.org/docs/download-go-annotations/))
+- Uber-anatomy ontology ([UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon))
+- Mammalian Phenotype ontology ([MP](http://www.informatics.jax.org/vocab/mp_ontology))
+- Human Phenotype Ontology ([HPO](https://hpo.jax.org/app/download/annotation))
 
 This work is done using [DL2vec](https://github.com/bio-ontology-research-group/DL2Vec). We convert different types of Description Logic axioms into graph representation, and then generate an embedding for each node and edge type.
 
@@ -90,8 +90,13 @@ Options:
 ```
     deepsvp -d data/ -i $your_annotsv_output.annotated.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
 ```    
-
-or by using [cwl-runner](https://github.com/common-workflow-language/cwltool), modify the input file in the input example yaml [deepsvp.yaml](https://github.com/bio-ontology-research-group/DeepSVP/blob/master/deepsvp.yaml) file and then run:
+Or run the example with the deepsvp-py38-pip2031 Conda Environment:
+```
+conda activate deepsvp-py38-pip2031
+deepsvp -d data/ -i $your_annotsv_output.annotated.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
+conda deactivate
+```
+Or by using [cwl-runner](https://github.com/common-workflow-language/cwltool), modify the input file in the input example yaml [deepsvp.yaml](https://github.com/bio-ontology-research-group/DeepSVP/blob/master/deepsvp.yaml) file and then run:
 
 	cwl-runner deepsvp.cwl deepsvp.yaml 
     
