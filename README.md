@@ -55,7 +55,7 @@ cd ..
 mv AnnotSV_2.2/ AnnotSV/
 ```
 
-- Run:
+- Run AnnotSV:
 ```
 bash 
 export ANNOTSV=/path_of_your_DeepSVP_data_repository/AnnotSV
