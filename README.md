@@ -86,9 +86,10 @@ Options:
     --help                    Show this message and exit.        
 ```
 
-- Run the example:
-
+- Run the example (with you own HPO terms):
+```
     deepsvp -d data/ -i $your_annotsv_output.annotated.tsv -p HP:0003701,HP:0001324,HP:0010628,HP:0003388,HP:0000774,HP:0002093,HP:0000508,HP:0000218 -m cl -maf 0.01 -ag max -o example_output.txt
+```    
 
 or by using [cwl-runner](https://github.com/common-workflow-language/cwltool), modify the input file in the input example yaml [deepsvp.yaml](https://github.com/bio-ontology-research-group/DeepSVP/blob/master/deepsvp.yaml) file and then run:
 
