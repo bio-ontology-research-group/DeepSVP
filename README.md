@@ -44,7 +44,7 @@ cd data                 ;# /path_of_your_DeepSVP_data_repository/
 wget "https://bio2vec.cbrc.kaust.edu.sa/data/DeepSVP/experiments.zip"   # can be very long
 unzip experiments.zip
 ```
-- Download and install the required [AnnoSV (v2.3 or 2.2)](https://lbgi.fr/AnnotSV/downloads) tool in the "data" folder:
+- Download and install the required [AnnoSV (2.2)](https://lbgi.fr/AnnotSV/downloads) tool in the "data" folder:
 ```
 cd /path_of_your_DeepSVP_data_repository/
 wget "https://lbgi.fr/AnnotSV/Sources/AnnotSV_2.2.tar.gz"
@@ -55,7 +55,7 @@ cd ..
 mv AnnotSV_2.2/ AnnotSV/
 ```
 
-- Run AnnotSV:
+- Run AnnotSV v2.2:
 ```
 bash 
 export ANNOTSV=/path_of_your_DeepSVP_data_repository/AnnotSV
