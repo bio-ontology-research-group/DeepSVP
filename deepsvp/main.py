@@ -233,7 +233,7 @@ def gene_node_vector(data_folder, graph, entity_list, data_type):
                              radius=100)
     run_walk(nodes, ego_graph, data_type)
     print("start to train the word2vec models")
-    mymodel = KeyedVectors.load(data_folder + data_type + "_embedding")
+    mymodel = KeyedVectors.load(os.path.join(data_folder, data_type + "_embedding"))
     mymodel.wv.min_count = 0
     mymodel.workers = 10
     mymodel.hashfix = hash
@@ -298,9 +298,9 @@ def blockPrinting(func):
 @blockPrinting
 def pheno_model(in_file, typee, filename, tmp, data_folder):
     print("loading data....")
-    G = json_graph.node_link_graph(json.load(open(data_folder + typee + "_graph.json")))
+    G = json_graph.node_link_graph(json.load(open(os.path.join(data_folder, typee + "_graph.json"))))
     #Rank all the genes
-    with open(data_folder + typee + "_gene_set.pkl","rb") as f:
+    with open(os.path.join(data_folder, typee + "_gene_set.pkl"),"rb") as f:
         genes=pkl.load(f)
         
     entities = set()
@@ -317,7 +317,7 @@ def pheno_model(in_file, typee, filename, tmp, data_folder):
             dic[entity] = word2vec_model.wv[entity]
 
     ranking_score = dict()
-    bestmodel = data_folder + typee + '_dl2vec_best_performance.pt'
+    bestmodel = os.path.join(data_folder, typee + '_dl2vec_best_performance.pt')
     device = torch.device("cpu")
     model = Rank_model(num_feature=100).double()
     model.load_state_dict(torch.load(bestmodel))
@@ -353,7 +353,7 @@ def pheno_model(in_file, typee, filename, tmp, data_folder):
 def cnv_model(model_type, features, operation, data_root):
     df = features.iloc[:, 1:features.shape[1]].values
     tf.keras.backend.clear_session()
-    model = tf.keras.models.load_model(data_root + model_type + "_" + operation + ".h5")
+    model = tf.keras.models.load_model(os.path.join(data_root, model_type + "_" + operation + ".h5"))
     pred = model.predict(df)
     result = pd.DataFrame()
     result['ID'] = features['ID']
@@ -444,7 +444,7 @@ def collect_features(data, onto, operation, data_root):
         features = preprocessing_categorical(features,i)    
     col = list(features.loc[:,'SV length':].columns)
     
-    with open(data_root+'mean_std_train.pkl', 'rb') as handle:
+    with open(os.path.join(data_root, 'mean_std_train.pkl'), 'rb') as handle:
         mean_std_train = pkl.load(handle)
     
     features = preprocessing_numeric(features,col,mean_std_train)
@@ -460,7 +460,7 @@ def load_cnv_model(in_file, model_type, aggregation, data_root, maf):
     data['1000g_AF'].fillna(0, inplace=True)
     data['GD_AF'].fillna(0, inplace=True)
     data = data[(data['1000g_AF'] <= maf) & (data['GD_AF'] <= maf)]
-    genes = pd.read_csv(data_root + "homo_entrez_gene.txt", sep=' ',low_memory=False, header=None)
+    genes = pd.read_csv(os.path.join(data_root, "homo_entrez_gene.txt"), sep=' ',low_memory=False, header=None)
     genes.columns=['id','entrezgene','Gene name']
     data = data.merge(genes, on=['Gene name'], how='left')
     features = collect_features(data, model_type, aggregation, data_root)

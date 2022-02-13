@@ -1,6 +1,12 @@
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: ["sh","deepsvp.sh"]
+
+baseCommand: deepsvp
+requirements:
+  - class: DockerRequirement
+    dockerPull: 'coolmaksat/deepsvp'
+  - class: InlineJavascriptRequirement
+
 inputs:
   path_data:
     type: Directory
@@ -8,36 +14,34 @@ inputs:
       string(s): list files in a directory.
     inputBinding:
       position: 1
+      prefix: '-d'
   input_file:
     type: File
+    inputBinding:
+      prefix: '-i'
   input_pheno:
     type: string
+    inputBinding:
+      prefix: '-p'
   onto_type:
     type: string
+    inputBinding:
+      prefix: '-m'
   agg_method:
     type: string 
+    inputBinding:
+      prefix: '-ag'
   maf_value:
     type: float?
+    inputBinding:
+      prefix: '-maf'
   output_file:
     type: string
+    inputBinding:
+      prefix: '-o'
 outputs:
   console_out: stdout
   anno_file_out: 
     type: File
     outputBinding:
       glob: $(inputs.output_file)
-arguments:
-  - valueFrom: $(inputs.path_data)
-  - valueFrom: $(inputs.input_file.basename)
-  - valueFrom: $(inputs.input_pheno)
-  - valueFrom: $(inputs.maf_value)
-  - valueFrom: $(inputs.onto_type)
-  - valueFrom: $(inputs.agg_method)
-  - valueFrom: $(inputs.output_file)
-requirements:
-  InitialWorkDirRequirement:
-    listing:
-      - entryname: deepsvp.sh
-        entry: |-
-          deepsvp -d $(inputs.path_data.path)'/' -i $(inputs.input_file.basename) -p input_pheno -maf $(inputs.maf_value)  -m $(inputs.onto_type) -ag $(inputs.agg_method) -o $(inputs.output_file)
-
