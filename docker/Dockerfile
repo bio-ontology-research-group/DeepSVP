@@ -1,11 +1,14 @@
-FROM spiralaico/python38_pytorch_base
+FROM python:3.8
 
-RUN pip install torch
-RUN pip install networkx
+RUN apt update
+RUN apt install -y bedtools bcftools
 
-RUN pip install deepsvp 
+RUN pip install torch networkx
 
 RUN git clone https://github.com/lgmgeo/AnnotSV.git --branch v2.3
-RUN cd AnnotSV && make PREFIX=. install
+WORKDIR /AnnotSV
+RUN make PREFIX=. install
 
 ENV ANNOTSV=/AnnotSV
+
+RUN pip install deepsvp

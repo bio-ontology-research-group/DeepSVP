@@ -1,0 +1,8 @@
+annotations_dir: 
+  class: Directory
+  location: '../AnnotSV/share/AnnotSV/'
+input_file: 
+  class: File
+  path: 'example.vcf'
+genome_build: 'GRCh38'
+output_file: './example_annotsv.tsv'
