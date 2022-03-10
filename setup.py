@@ -27,13 +27,13 @@ pytest_runner = ["pytest < 6", "pytest-runner < 5"] if needs_pytest else []
 
 setup(
     name="deepsvp",
-    version="1.0.2",
+    version="1.0.3",
     description="DeepSVP: Integration of Genomics and Phenotypes forStructural Variant Prioritization using Deep Learning",
     long_description=open(README).read(),
     long_description_content_type="text/markdown",
     author="Azza Althagafi",
     author_email="azza.althagafi@kaust.edu.sa",
-    download_url="https://github.com/bio-ontology-research-group/deepsvp/archive/v1.0.2.tar.gz",
+    download_url="https://github.com/bio-ontology-research-group/deepsvp/archive/v1.0.3.tar.gz",
     license="Apache 2.0",
     packages=["deepsvp",],
     package_data={"deepsvp": [],},
